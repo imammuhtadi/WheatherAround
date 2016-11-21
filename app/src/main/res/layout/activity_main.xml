@@ -12,18 +12,20 @@
     tools:context="com.imammuhtadi.weatheraround.MainActivity">
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
     <Button
-        android:id="@+id/btRetrofit"
-        android:text="Using Retrofit"
+        android:id="@+id/btRx"
+        android:text="Simple Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
     <Button
-        android:id="@+id/btRx"
-        android:text="Using Rx"
+        android:id="@+id/btRetrofit"
+        android:text="Display in RecyclerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -23,7 +23,6 @@ import retrofit2.http.QueryMap;
 import rx.Observable;
 
 public interface RestAPI{
-    //?lat=7.7777&lon=110.5434&appid=8c19c1a85ca5ab8cb1da9c2afef49078
 
     @GET("weather")
     Call<DataResponse> loadRetrofitWeather(@QueryMap Map<String, String> options);

@@ -1,8 +1,8 @@
 package com.imammuhtadi.weatheraround;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,13 +13,11 @@ import com.imammuhtadi.weatheraround.model.Clouds;
 import com.imammuhtadi.weatheraround.model.DataResponse;
 import com.imammuhtadi.weatheraround.model.Main;
 import com.imammuhtadi.weatheraround.model.Wind;
+import com.imammuhtadi.weatheraround.screen.DashboardActivity;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
@@ -57,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btRetrofit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*
                 final RestAPI serviceRet = RetrofitService.createRetrofitClient();
                 Call<DataResponse> getData = serviceRet.loadRetrofitWeather(options);
                 getData.enqueue(new Callback<DataResponse>() {
@@ -81,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("onFailure", t.toString());
                     }
                 });
+                 */
+                Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                startActivity(intent);
             }
         });
 
